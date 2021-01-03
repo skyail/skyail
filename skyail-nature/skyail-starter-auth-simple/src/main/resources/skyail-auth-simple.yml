@@ -1,0 +1,8 @@
+auth:
+  ignore:
+    - /test/**
+    - /test_new/**
+  user:
+    username: admin
+    password: 71d8b5968604e655c8a7a8a254b8f8c6 #admin的密文，程序中加密之后进行比较
+  custom-user: false #自定义获取用户信息策略，如果开启需要实现 ICustomUser 接口，并且上面 user 配置无效

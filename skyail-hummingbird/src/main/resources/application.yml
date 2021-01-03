@@ -1,0 +1,79 @@
+# 启动端口配置
+server:
+  port: 8060
+
+# 数据源配置
+#spring:
+#  datasource:
+#    url: jdbc:mysql://121.36.58.81:3306/test_oauth2?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+#    username: score-system
+#    password: D7lYRjMiL^s*70Ck
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    druid:
+#      initial-size: 5 #初始化时建立物理连接的个数
+#      min-idle: 5 #最小连接池数量
+#      max-active: 200 #最大连接池数量
+#      max-wait: 1200 #获取连接时最大等待时间，单位毫秒
+#      pool-prepared-statements: false #PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭
+#      validation-query: SELECT 1
+
+spring:
+  datasource:
+    url: jdbc:sqlite:./db/db.db?date_string_format=yyyy-MM-dd HH:mm:ss
+    driver-class-name: org.sqlite.JDBC
+    username:
+    password:
+
+
+
+#mybatis-plus配置
+mybatis-plus:
+  #Mapper路径
+  # 如果是放在src/main/java目录下 classpath:/com/yourpackage/*/mapper/*Mapper.xml
+  # 如果是放在resource目录 classpath:/mapper/*Mapper.xml
+  mapper-locations: classpath:/com/skyail/*/*Mapper.xml
+  #实体扫描，多个package用逗号或者分号分隔
+  typeAliasesPackage: com.skyail.entity
+  configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  #global-config:
+  #  db-config:
+  #    logic-delete-value: E
+  #    logic-not-delete-value: U
+
+
+auth:
+  ignore:
+    - /test/findByCondition
+    - /test_new/**
+  user:
+    username: admin
+    password: 71d8b5968604e655c8a7a8a254b8f8c6 #admin的密文，程序中加密之后进行比较，加密方法为 EncAndDecUtil.encryptSM4(CommonConstants.SECRET_KEY, user.getPassword())
+  custom-user: false #自定义获取用户信息策略，如果开启需要实现 ICustomUser 接口，并且上面 user 配置无效
+
+
+# mybatis plus 动态表名配置
+mp:
+  # 年表
+  yearTableNames:
+    - yj_alarm_info
+  # 日表
+  dayTableNames:
+    - yj_vehicle_pass_city
+
+
+#xss过滤
+xss:
+  enable: true
+  excludes:
+    #- /test/*
+    #- /test1/*
+
+#接口输入参数自动trim
+auto-trim:
+  enable: true
+
+#日志级别
+logging:
+  level:
+    root: info

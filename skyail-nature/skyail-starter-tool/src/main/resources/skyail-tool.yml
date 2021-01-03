@@ -1,0 +1,7 @@
+xss:
+  enable: true
+  excludes:
+
+
+auto-trim:
+  enable: true

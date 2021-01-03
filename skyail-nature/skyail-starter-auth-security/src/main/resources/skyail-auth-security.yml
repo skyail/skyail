@@ -1,0 +1,6 @@
+auth:
+  security:
+    sign-key: skyail.com
+    ignore:
+      - /test/**
+      - /test1/**

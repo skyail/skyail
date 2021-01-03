@@ -1,0 +1,17 @@
+# 数据源配置
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/skyail?useSSL=false&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&transformedBitIsBoolean=true&serverTimezone=GMT%2B8&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+    username: skyail
+    password: skyail
+    driverClassName: com.mysql.cj.jdbc.Driver
+    druid:
+      initial-size: 5 #初始化时建立物理连接的个数
+      min-idle: 5 #最小连接池数量
+      max-active: 200 #最大连接池数量
+      max-wait: 1200 #获取连接时最大等待时间，单位毫秒
+      pool-prepared-statements: false #PSCache对支持游标的数据库性能提升巨大，比如说oracle。在mysql下建议关闭
+      validation-query: SELECT 1
+
+
+
