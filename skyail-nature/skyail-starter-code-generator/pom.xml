@@ -29,13 +29,13 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-mybatis</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-db</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
 

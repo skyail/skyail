@@ -16,19 +16,19 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-common</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${base.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-launch</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${base.version}</version>
         </dependency>
 
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-enc</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${base.version}</version>
         </dependency>
         <!-- lombok -->
         <dependency>

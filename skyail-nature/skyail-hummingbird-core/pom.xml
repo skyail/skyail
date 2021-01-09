@@ -15,32 +15,32 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-auth-simple</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
 
         <dependency>
             <artifactId>skyail-starter-mybatis</artifactId>
             <groupId>com.skyail</groupId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
         <dependency>
             <artifactId>skyail-starter-common</artifactId>
             <groupId>com.skyail</groupId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${base.version}</version>
         </dependency>
 
 
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-code-generator</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-db</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
 
@@ -48,14 +48,14 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-log4j2</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
 
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-tool</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
 
@@ -63,13 +63,13 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-cache</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
 
         <dependency>
             <artifactId>skyail-starter-enc</artifactId>
             <groupId>com.skyail</groupId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
     </dependencies>
 

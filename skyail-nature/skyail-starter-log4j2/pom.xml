@@ -34,7 +34,7 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-starter-launch</artifactId>
-            <version>${project.version}</version>
+            <version>${base.version}</version>
         </dependency>
     </dependencies>
 
