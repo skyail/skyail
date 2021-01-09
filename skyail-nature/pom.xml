@@ -42,7 +42,7 @@
         <druid.version>1.1.22</druid.version>
         <mybatis.plus.version>3.4.0</mybatis.plus.version>
         <lombok.version>1.18.12</lombok.version>
-        <oracle.connector.version>12.2.0.1</oracle.connector.version>
+        <oracle.connector.version>12.1.0.1</oracle.connector.version>
         <postgresql.connector.version>42.2.6</postgresql.connector.version>
         <spring.security.version>2.1.5.RELEASE</spring.security.version>
         <spring.security.oauth2.version>2.3.5.RELEASE</spring.security.oauth2.version>
