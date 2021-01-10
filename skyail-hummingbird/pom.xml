@@ -6,7 +6,7 @@
 
     <groupId>com.skyail</groupId>
     <artifactId>skyail-hummingbird</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1.RELEASE</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>com.skyail</groupId>
             <artifactId>skyail-hummingbird-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.1-RELEASE</version>
         </dependency>
 
 
