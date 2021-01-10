@@ -25,6 +25,7 @@ import java.util.List;
 public class DynamicTablesConfiguration {
 
 	private SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");
+	private SimpleDateFormat sdfMonth = new SimpleDateFormat("yyyyMM");
 	private SimpleDateFormat sdfDay = new SimpleDateFormat("yyyyMMdd");
 
 
@@ -44,8 +45,11 @@ public class DynamicTablesConfiguration {
 			List<String> yearTables = tableNames.getYearTableNames();
 			//日表列表
 			List<String> dayTables = tableNames.getDayTableNames();
+			//月表
+			List<String> monthTables = tableNames.getMonthTableNames();
 			//动态表规则 初始表名+_+日期
 			yearTables.forEach(tableTitle -> put(tableTitle,(metaObject, sql, tableName) -> tableName + "_" + sdfYear.format(new Date())));
+			monthTables.forEach(tableTitle -> put(tableTitle,(metaObject, sql, tableName) -> tableName + "_" + sdfMonth.format(new Date())));
 			dayTables.forEach(tableTitle -> put(tableTitle,(metaObject, sql, tableName) -> tableName + "_" + sdfDay.format(new Date())));
 		}});
 		paginationInterceptor.setSqlParserList(Collections.singletonList(dynamicTableNameParser));
