@@ -41,7 +41,10 @@ mybatis-plus:
 mp:
   # 年表
   yearTableNames:
-    - yj_alarm_info
+    - test_year
   # 日表
   dayTableNames:
-    - yj_vehicle_pass_city
+    - test_day
+  # 月表
+  monthTableNames:
+    - test_month
