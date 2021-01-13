@@ -1,4 +1,4 @@
-package com.skyail.cloud.common.util;
+package com.skyail.common.util;
 
 import com.skyail.cloud.common.constant.CommonConstant;
 import lombok.extern.slf4j.Slf4j;
