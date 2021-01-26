@@ -85,7 +85,7 @@
       excludes:
         #- /test/*
         #- /test1/*
-### 2.接口参数自动trim。统一处理接口首位空字符问题。
+### 2.接口参数自动trim。统一处理接口首尾空字符问题。
     #接口输入参数自动trim
     auto-trim:
       enable: true
