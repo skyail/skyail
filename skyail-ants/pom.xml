@@ -15,6 +15,7 @@
         <module>skyail-system</module>
         <module>skyail-user</module>
         <module>skyail-common</module>
+        <module>skyail-develop</module>
     </modules>
 
 
