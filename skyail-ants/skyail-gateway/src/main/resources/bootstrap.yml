@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true #以服务名称全小写的方式作为服务地址(的一部分)
+          enabled: true #开启根据服务名称获取服务地址
+      routes:
+        - id: skyail-user
+          uri: lb://skyail-user
+          predicates:
+            - Path=/skyail-user/**
+          filters:
+            - StripPrefix=1
+    nacos:
+      config:
+        file-extension: yaml #指定配置文件格式，以便正确解析参数值
+        group: DEFAULT_GROUP #指定nacos上配置文件的分组
+        prefix: skyail #配置文件前缀，因为不同环境配置文件名称不同，如 skyail-dev.yaml ， skyail-prod.yaml 等
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: 'http://localhost:8060/getPublicKey'
+
+
+
+
+
+#skyail-register:
+#  ribbon:
+#    NFLoadBalancerRuleClassName: com.skyail.gateway.config.NacosWeightRandomV2Rule
+logging:
+  level:
+    root: info

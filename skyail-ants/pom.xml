@@ -14,6 +14,7 @@
         <module>skyail-log</module>
         <module>skyail-system</module>
         <module>skyail-user</module>
+        <module>skyail-common</module>
     </modules>
 
 
@@ -24,7 +25,13 @@
     </parent>
 
     <properties>
-        <project.version>1.0-SNAPSHOT</project.version>
+        <base.version>1.0-SNAPSHOT</base.version>
+
+        <spring.security.version>2.1.5.RELEASE</spring.security.version>
+        <spring.security.oauth2.version>2.3.5.RELEASE</spring.security.oauth2.version>
+        <spring.security.jwt.version>1.0.10.RELEASE</spring.security.jwt.version>
+        <jjwt.version>0.9.1</jjwt.version>
+        <nature.common.version>1.0.3-RELEASE</nature.common.version>
     </properties>
 
     <dependencies>

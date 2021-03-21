@@ -1,4 +1,4 @@
-package com.skyail.cloud.common.constant;
+package com.skyail.common.constant;
 
 public interface CommonConstant {
 

@@ -11,5 +11,14 @@
 
     <artifactId>skyail-user</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.skyail</groupId>
+            <artifactId>skyail-common</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+    </dependencies>
 
 </project>

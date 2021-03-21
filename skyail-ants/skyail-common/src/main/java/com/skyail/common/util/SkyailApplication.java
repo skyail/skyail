@@ -1,6 +1,6 @@
 package com.skyail.common.util;
 
-import com.skyail.cloud.common.constant.CommonConstant;
+import com.skyail.common.constant.CommonConstant;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.util.StringUtils;
