@@ -20,10 +20,10 @@ public class JwtTokenEnhancer implements TokenEnhancer {
 
 
         ((DefaultOAuth2AccessToken)oAuth2AccessToken).setAdditionalInformation(info);
-        //设置token过期时间，120分钟
-        Calendar now = Calendar.getInstance();
-        now.add(Calendar.MINUTE,120);
-        ((DefaultOAuth2AccessToken) oAuth2AccessToken).setExpiration(now.getTime());
+        //此处用于强制设置token失效时间，默认会根据 client 表中的时间进行设置，不建议在这里强制写固定
+        /*Calendar now = Calendar.getInstance();
+        now.add(Calendar.MINUTE,1);
+        ((DefaultOAuth2AccessToken) oAuth2AccessToken).setExpiration(now.getTime());*/
         return oAuth2AccessToken;
     }
 }

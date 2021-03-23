@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 import javax.sql.DataSource;
 
 @Service
-public class MyClientsDetailServiceImpl extends JdbcClientDetailsService {
+public class SkyailClientDetailServiceImpl extends JdbcClientDetailsService {
 
 
-    public MyClientsDetailServiceImpl(DataSource dataSource) {
+    public SkyailClientDetailServiceImpl(DataSource dataSource) {
         super(dataSource);
     }
 

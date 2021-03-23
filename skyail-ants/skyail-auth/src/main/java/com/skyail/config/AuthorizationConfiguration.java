@@ -1,5 +1,8 @@
 package com.skyail.config;
 
+import com.skyail.common.constant.AuthConstant;
+import com.skyail.service.SkyailClientDetailServiceImpl;
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -17,6 +20,7 @@ import org.springframework.security.oauth2.provider.token.TokenEnhancerChain;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
 
+import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +31,7 @@ public class AuthorizationConfiguration extends AuthorizationServerConfigurerAda
 
     @Autowired
     private DataSource dataSource;
-    @Autowired
+    @Resource
     private UserDetailsService userDetailsService;
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -70,6 +74,23 @@ public class AuthorizationConfiguration extends AuthorizationServerConfigurerAda
 
     }
 
+
+    /**
+     * 自定义client查询逻辑
+     * @param clients
+     */
+    @Override
+    @SneakyThrows
+    public void configure(ClientDetailsServiceConfigurer clients) {
+        //设置自定义查询sql（根据id查询）
+        clientDetailsService.setSelectClientDetailsSql(AuthConstant.CLIENT_SELECT_SQL);
+        //设置查询排序sql（查询全部）
+        clientDetailsService.setFindClientDetailsSql(AuthConstant.CLIENT_FIND_ALL_SQL);
+        clientDetailsService.setPasswordEncoder(passwordEncoder);
+        clients.withClientDetails(clientDetailsService);
+    }
+
+
     //检测token的策略
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
@@ -79,13 +100,4 @@ public class AuthorizationConfiguration extends AuthorizationServerConfigurerAda
                 .passwordEncoder(passwordEncoder);
     }
 
-    //OAuth2的主配置信息
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        //从数据库取数据
-        if(clientDetailsService != null){
-            clientDetailsService.setPasswordEncoder(passwordEncoder);
-        }
-        clients.withClientDetails(clientDetailsService);
-    }
 }

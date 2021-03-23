@@ -22,14 +22,19 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Resource
     private UserDetailsService userService;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
 
 
     @Bean
-    public PasswordEncoder myPasswordEncoder() {
+    public PasswordEncoder skyailPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
+
+    /*public static void main(String[] args) {
+        BCryptPasswordEncoder bc = new BCryptPasswordEncoder();
+        String pass = bc.encode("123123");
+        boolean flag = bc.matches("123123",pass);
+        System.out.println(flag);
+    }*/
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
