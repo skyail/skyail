@@ -16,7 +16,7 @@ public class JwtTokenEnhancer implements TokenEnhancer {
     public OAuth2AccessToken enhance(OAuth2AccessToken oAuth2AccessToken, OAuth2Authentication oAuth2Authentication) {
         //写入自定义字段
         Map<String,Object> info = new HashMap<>();
-        info.put("license","my-boot");
+        info.put("license","skyail");
 
 
         ((DefaultOAuth2AccessToken)oAuth2AccessToken).setAdditionalInformation(info);
