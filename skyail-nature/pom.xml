@@ -32,7 +32,7 @@
         <module>skyail-starter-cache</module>
         <module>skyail-starter-auth-security</module>
         <module>skyail-hummingbird-core</module>
-        <module>skyail-starter-cloud-common</module>
+        <module>skyail-starter-heartbeat</module>
     </modules>
 
     <properties>
