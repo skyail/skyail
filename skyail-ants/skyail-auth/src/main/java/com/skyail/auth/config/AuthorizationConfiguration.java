@@ -1,7 +1,6 @@
-package com.skyail.config;
+package com.skyail.auth.config;
 
 import com.skyail.common.constant.AuthConstant;
-import com.skyail.service.SkyailClientDetailServiceImpl;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;

@@ -1,4 +1,4 @@
-package com.skyail.endpoint;
+package com.skyail.auth.endpoint;
 
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;

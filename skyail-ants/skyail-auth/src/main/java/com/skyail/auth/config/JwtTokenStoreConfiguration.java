@@ -1,7 +1,7 @@
-package com.skyail.config;
+package com.skyail.auth.config;
 
-import com.skyail.enhancer.JwtTokenEnhancer;
-import com.skyail.props.AuthSecurityProperties;
+import com.skyail.auth.enhancer.JwtTokenEnhancer;
+import com.skyail.auth.props.AuthSecurityProperties;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;

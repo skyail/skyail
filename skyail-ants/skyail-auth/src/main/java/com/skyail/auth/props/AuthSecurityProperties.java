@@ -1,8 +1,7 @@
-package com.skyail.props;
+package com.skyail.auth.props;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.PropertySource;
 
 import java.util.List;
 

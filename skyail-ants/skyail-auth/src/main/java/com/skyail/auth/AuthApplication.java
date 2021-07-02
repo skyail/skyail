@@ -1,4 +1,4 @@
-package com.skyail;
+package com.skyail.auth;
 
 import com.skyail.common.util.SkyailApplication;
 import org.springframework.cloud.client.SpringCloudApplication;

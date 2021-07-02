@@ -15,12 +15,6 @@ spring:
             - Path=/skyail-user/**
           filters:
             - StripPrefix=1
-    nacos:
-      config:
-        file-extension: yaml #指定配置文件格式，以便正确解析参数值
-        group: DEFAULT_GROUP #指定nacos上配置文件的分组
-        prefix: skyail #配置文件前缀，因为不同环境配置文件名称不同，如 skyail-dev.yaml ， skyail-prod.yaml 等
-
   security:
     oauth2:
       resourceserver:

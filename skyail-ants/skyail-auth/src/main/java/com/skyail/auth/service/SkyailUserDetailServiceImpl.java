@@ -1,7 +1,7 @@
-package com.skyail.service;
+package com.skyail.auth.service;
 
-import com.skyail.entity.SysRole;
-import com.skyail.entity.SysUser;
+import com.skyail.auth.entity.SysRole;
+import com.skyail.auth.entity.SysUser;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

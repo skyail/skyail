@@ -1,4 +1,4 @@
-package com.skyail.entity;
+package com.skyail.auth.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,4 +1,4 @@
-package com.skyail.service;
+package com.skyail.auth.service;
 
 import org.springframework.security.oauth2.provider.ClientDetails;
 import org.springframework.security.oauth2.provider.client.JdbcClientDetailsService;
