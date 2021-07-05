@@ -1,6 +1,7 @@
 server:
   port: 8010
-
 spring:
-  application:
-    name: skyail-admin
+  security:
+    user:
+      name: admin
+      password: admin
